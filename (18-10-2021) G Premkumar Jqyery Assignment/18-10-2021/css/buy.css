@@ -1,0 +1,45 @@
+.maincontent {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 75%;
+    margin: 40px;
+    padding: 15px;
+}
+
+
+/* h2 {
+    color: white;
+} */
+
+.buy {
+    margin: 50px;
+}
+
+.buyrow {
+    margin-bottom: 35px;
+}
+
+.content {
+    padding: 30px;
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+input {
+    margin-right: 40px;
+}
+
+select {
+    height: 30px;
+    width: 280px;
+    background-color: whitesmoke;
+    font-size: 17px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.bankdetails {
+    display: none;
+}
