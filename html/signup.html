@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/18-10-2021/css/signin.css">
+    <link rel="stylesheet" href="/18-10-2021/css/Shopping.css">
+</head>
+
+<body>
+    <!-- /* ----------------------------------------------------------------------------------------
+ navbar
+---------------------------------------------------------------------------------------- */ -->
+    <nav>
+        <a style="font-size: larger; font-weight: 600;" href="Shopping.html"><i class="fa fa-shopping-cart" ></i>&emsp;Shopping Mart</a>
+        <div class="navbar">
+            <a href="Shopping.html">Home</a>
+            <a href="diwali.html">Diwali Special</a>
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html" class="active">Sign up</a>
+            <a href="mycart.html">My cart</a>
+        </div>
+    </nav>
+    <!-- /* ----------------------------------------------------------------------------------------
+ Sign-up form
+---------------------------------------------------------------------------------------- */ -->
+    <div class="signin" style="height:550px;">
+        <div class="content">
+            <ion-icon name="person" style="height: 50px; width: 50px; color: #425664;" class="user"></ion-icon>
+            <form action="#" method="GET" class="signinform" autocomplete="off">
+                <div class="signrow">
+                    <input type="text" placeholder="Customer name" class="customername" onkeydown="cucustomerName()">
+                    <label for="" class="lblcustomername"></label>
+                </div>
+                <div class="signrow">
+                    <input type="email" placeholder="mail id" class="email" onkeyup="email()"><br>
+                    <label for="" class="lblemail"></label>
+                </div>
+                <div class="signrow">
+                    <input type="text" name="" id="supUserName" placeholder="username" onkeyup="SupUsername()"><br>
+                    <label for="" class="lblSupusername"></label>
+                </div>
+                <div class="signrow">
+                    <input type="password" placeholder="password" class="SupPassword" onkeyup="supPassword()"><br>
+                    <label for="" class="lblSuppassword"></label>
+                </div>
+                <div class="signrow">
+                    <input type="password" name="" id="repassword" placeholder="re-type your password" onkeyup="supRePassword()"><br>
+                    <label for="" class="lblrepassword"></label>
+                </div>
+                <div class="signrow">
+                    <button type="submit" class="signupbtn" style="margin-bottom: -30px;">Signup</button><br>
+                </div>
+                <div class="signrow">
+                    <a href="signin.html" class="aha" style="text-decoration: underline; text-underline-position: under;">Already have an account ?</a>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <!-- /* ----------------------------------------------------------------------------------------
+ Scripts
+---------------------------------------------------------------------------------------- */ -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="/18-10-2021/js/signup.js"></script>
+    <script src="/18-10-2021/js/Shopping.js"></script>
+    <script src="/18-10-2021/js//jquery.min.js"></script>
+    <script>
+        // $(document).ready(function() {
+        //     $('.customername').on('keyup', function(e) {
+        //         let temp = $('.customername').val();
+        //         if (e.which === 32) {
+        //             $('.lblcustomername').html('empty spaces are not allowed').addClass('error');
+        //             return false;
+        //         } else if (temp == "") {
+        //             $('.lblcustomername').html('Customername is required').addClass('error');
+        //             return false;
+        //         } else if (temp.length < 4) {
+        //             $('.lblcustomername').html('Atleast 4 characters are required').addClass('error');
+        //             return false
+        //         } else {
+        //             $('.lblcustomername').empty();
+        //             return true
+        //         }
+        //     })
+        // })
+    </script>
+</body>
+
+</html>

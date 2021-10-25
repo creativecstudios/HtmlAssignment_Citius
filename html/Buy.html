@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/18-10-2021/css/Shopping.css">
+    <link rel="stylesheet" href="/18-10-2021/css/buy.css">
+    <link rel="stylesheet" href="/18-10-2021/css/signin.css">
+    <title>Buy</title>
+</head>
+
+<body>
+    <!-- /* ----------------------------------------------------------------------------------------
+ navbar
+---------------------------------------------------------------------------------------- */ -->
+    <nav>
+        <a style="font-size: larger; font-weight: 600;" href="Shopping.html"><i class="fa fa-shopping-cart"></i>&emsp;Shopping Mart</a>
+        <div class="navbar">
+            <a href="Shopping.html">Home</a>
+            <a href="diwali.html">Diwali Special</a>
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html">Sign up</a>
+            <a href="mycart.html">My cart</a>
+        </div>
+    </nav>
+    <div class="maincontent">
+        <div class="buy">
+            <h2>Place your order</h2>
+            <form action="#" method="GET" autocomplete="off">
+                <div class="content">
+                    <div class="buyrow">
+                        <input type="text" id="firstname" placeholder="first name">
+                        <label class="lblfirstname" for=""></label>
+                    </div>
+                    <div class="buyrow">
+                        <input type="text" id="lastname" placeholder="last name">
+                        <label class="lbllastname"></label>
+                    </div>
+                    <div class="buyrow">
+                        <input type="number" id="phonenumber" placeholder="phone number">
+                        <label class="lblphonenumber"></label>
+                    </div>
+                    <div class="buyrow">
+                        <input type="text" id="housenumber" placeholder="house number">
+                        <label class="lblhousenumber"></label>
+                    </div>
+                    <div class="buyrow">
+                        <input type="text" id="streetname" placeholder="street name">
+                        <label class="lblstreetname"></label>
+                    </div>
+                    <div class="buyrow">
+                        <input type="text" id="landmark" placeholder="landmark">
+                        <label class="lbllandmark"></label>
+                    </div>
+                    <div class="buyrow">
+                        <input type="text" id="city" placeholder="city">
+                        <label class="lblcity"></label>
+                    </div>
+                    <div class="buyrow">
+                        <input type="text" id="state" placeholder="state">
+                        <label class="lblstate"></label>
+                    </div>
+                    <div class="buyrow">
+                        <input type="number" id="pincode" placeholder="pincode">
+                        <label class="lblpincode"></label>
+                    </div>
+                    <label style="font-size: 17px; letter-spacing: 1px; font-weight: 500;">Payment method : </label>
+                    <select name="" id="payment">
+                        <option value="Cash">Cash</option>
+                        <option value="Card">Card</option>
+                    </select>
+                    <button id="placetheorder" style="margin-top: -1px; background-color: rgb(33, 177, 33); color: white;">Place the order</button>
+                </div>
+            </form>
+            <div class="bankdetails">
+                <h2 style="margin-bottom: 20px; padding: 2px;">Bank Details</h2>
+                <div class="buyrow">
+                    <input type="text" name="" id="bankname" placeholder="bank name">
+                    <label class="lblbankname"></label>
+                </div>
+                <div class="buyrow">
+                    <input type="date" name="" id="expirydate" placeholder="expiry yy/mm">
+                    <label class="lblexpirydate"></label>
+                </div>
+                <div class="buyrow">
+                    <input type="number" name="" id="ccv" placeholder="CCV">
+                    <label class="lblccv"></label>
+                </div>
+                <button id="proceedtopay" style="margin-top: -30px; background-color: rgb(14, 182, 14); color: white;">Proceed to pay</button>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script src="/18-10-2021/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let result = false;
+            $('#firstname').on('keyup', function(e) {
+                let username = $('#firstname').val();
+                if (e.which === 32) {
+                    $('.lblfirstname').html('empty spaces are not allowed').addClass('error');
+                    result = false;
+                } else if (username == "") {
+                    $('.lblfirstname').html('firstname is required').addClass('error');
+                    result = false;
+                } else {
+                    $('.lblfirstname').empty();
+                    result = true;
+                }
+            })
+            $('#lastname').on('keyup', function(e) {
+                let username = $('#lastname').val();
+                if (e.which === 32) {
+                    $('.lbllastname').html('empty spaces are not allowed').addClass('error');
+                    result = false;
+
+                } else if (username == "") {
+                    $('.lbllastname').html('lastname is required').addClass('error');
+                    result = false;
+
+                } else {
+                    $('.lbllastname').empty();
+                    result = true;
+
+                }
+            })
+            $('#phonenumber').on('keyup', function(e) {
+                let username = $('#phonenumber').val();
+                if (e.which === 32) {
+                    $('.lblphonenumber').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblphonenumber').html('phonenumber is required').addClass('error');
+                } else if (username.length > 10 || username.length < 10) {
+                    $('.lblphonenumber').html('enter only 10 digits').addClass('error');
+                } else {
+                    $('.lblphonenumber').empty();
+                }
+            })
+            $('#housenumber').on('keyup', function(e) {
+                let username = $('#housenumber').val();
+                if (e.which === 32) {
+                    $('.lblhousenumber').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblhousenumber').html('housenumber is required').addClass('error');
+                } else {
+                    $('.lblhousenumber').empty();
+                }
+            })
+            $('#streetname').on('keyup', function(e) {
+                let username = $('#streetname').val();
+                if (e.which === 32) {
+                    $('.lblstreetname').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblstreetname').html('streetname is required').addClass('error');
+                } else {
+                    $('.lblstreetname').empty();
+                }
+            })
+            $('#landmark').on('keyup', function(e) {
+                let username = $('#landmark').val();
+                if (e.which === 32) {
+                    $('.lbllandmark').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lbllandmark').html('landmark is required').addClass('error');
+                } else {
+                    $('.lbllandmark').empty();
+                }
+            })
+            $('#city').on('keyup', function(e) {
+                let username = $('#city').val();
+                if (e.which === 32) {
+                    $('.lblcity').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblcity').html('city is required').addClass('error');
+                } else {
+                    $('.lblcity').empty();
+                }
+            })
+            $('#state').on('keyup', function(e) {
+                let username = $('#state').val();
+                if (e.which === 32) {
+                    $('.lblstate').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblstate').html('state is required').addClass('error');
+                } else {
+                    $('.lblstate').empty();
+                }
+            })
+            $('#pincode').on('keyup', function(e) {
+                let username = $('#pincode').val();
+                if (e.which === 32) {
+                    $('.lblpincode').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblpincode').html('pincode is required').addClass('error');
+                } else {
+                    $('.lblpincode').empty();
+                }
+            })
+            $('#bankname').on('keyup', function(e) {
+                let username = $('#bankname').val();
+                if (e.which === 32) {
+                    $('.lblbankname').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblbankname').html('bankname is required').addClass('error');
+                } else {
+                    $('.lblbankname').empty();
+                }
+            })
+            $('#expirydate').on('keyup', function(e) {
+                let username = $('#expirydate').val();
+                if (e.which === 32) {
+                    $('.lblexpirydate').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblexpirydate').html('expiry date is required').addClass('error');
+                } else {
+                    $('.lblexpirydate').empty();
+                }
+            })
+            $('#ccv').on('keyup', function(e) {
+                let username = $('#ccv').val();
+                if (e.which === 32) {
+                    $('.lblccv').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblccv').html('ccv is required').addClass('error');
+                } else {
+                    $('.lblccv').empty();
+                }
+            })
+            $('select').on('change', function() {
+                let value = $('select').val();
+                if (value == 'Card') {
+                    $('#placetheorder').hide();
+                    $('.bankdetails').show();
+                } else {
+                    $('.bankdetails').hide();
+                    $('#placetheorder').show();
+                }
+            })
+            let order = 'Ordered Successfully';
+            $('#placetheorder').click(function() {
+                alert(order);
+            })
+            $('#proceedtopay').click(function() {
+                alert(order);
+            })
+
+        })
+    </script>
+</body>
+
+</html>

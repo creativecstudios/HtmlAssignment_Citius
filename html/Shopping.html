@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>
+        Shopping-cart</title>
+    <link rel="stylesheet" href="/18-10-2021/css/Shopping.css">
+</head>
+
+<body>
+    <!-- /* ----------------------------------------------------------------------------------------
+ navbar
+---------------------------------------------------------------------------------------- */ -->
+    <div class="navigation">
+        <nav>
+            <a style="font-size: larger; font-weight: 600;" href="Shopping.html"><i class="fa fa-shopping-cart"></i>&emsp;Shopping Mart</a>
+            <div class="navbar">
+                <a href="Shopping.html" class="active">Home</a>
+                <a href="diwali.html">Diwali Special</a>
+                <a href="signin.html">Sign in</a>
+                <a href="signup.html">Sign up</a>
+                <a href="mycart.html">My cart</a>
+            </div>
+        </nav>
+    </div>
+    <!-- /* ----------------------------------------------------------------------------------------
+ Heading 
+---------------------------------------------------------------------------------------- */ -->
+    <div class="topcontent">
+        <div class="col">
+            <div class="colele1">
+                <h1>Welcome to <br>Our Shopping Mart</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum placeat incidunt blanditiis, ullam consequatur, quibusdam amet veniam praesentium mollitia temporibus magni molestias repellendus sint sed. Numquam ad nemo laudantium provident?</p>
+            </div>
+            <div class="colele">
+                <img src="/18-10-2021/images/apple.jpg" alt="" height="450px" width="650px" style="border-radius: 13px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- /* ----------------------------------------------------------------------------------------
+    Laptops
+   ---------------------------------------------------------------------------------------- */ -->
+    <div class="items">
+        <h1 class="itemsheading">Laptops</h1>
+
+        <div class="card">
+            <div class="image">
+                <img src="/18-10-2021/images/lenovoideapadslim3.png" alt="" srcset="" class="vivobook14img">
+            </div>
+            <div class="desc">
+                <h2 class="v14">35.56cm(14") Vivobook 14 (KM413, AMD Ryzen 5000 Series)</h2>
+                <h3 class="v14desc">Windows 10 Home - ASUS recommends Windows 10 Pro for business , Free Upgrade to Windows 11¹ (when available, see below)</h3>
+                <a href="#" id="moreitems">more-info</a>
+                <ul class="ulliv14">
+                    <li>AMD Ryzen™ 7 5700 series</li>
+                    <li>AMD Radeon™ Graphics</li>
+                    <li>Up to 8 GB memory</li>
+                    <li>512GB M.2 NVMe™ PCIe® 3.0 SSD</li>
+                    <li>35.56 cm(14") FHD NanoEdge display</li>
+                    <li>Optional fingerprint sensor login</li>
+                </ul>
+                <h2 class="price">₹ 58,990.00</h2>
+                <h5> <span>₹ 73,990.00</span> SAVE ₹ 15,000.00</h5>
+                <button class="vivobook14" onclick="buy('35.56cm(14) Vivobook 14 (KM413, AMD Ryzen 5000 Series)','Windows 10 Home - ASUS recommends Windows 10 Pro for business , Free Upgrade to Windows 11¹ (when available, see below)','₹ 58,990.00')">Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/18-10-2021/images/asusvivobook15.png" alt="" srcset="">
+            </div>
+            <div class="desc">
+                <h2>39.62cm(15.6") Vivobook 15 OLED K513 (11th gen intel)</h2>
+                <h3>Windows 10 Home - ASUS recommends Windows 10 Pro for business , Free Upgrade to Windows 11¹ (when available, see below)</h3>
+                <a href="#" id="moreitems">more-info</a>
+                <ul>
+                    <li>Up to NVIDIA® GeForce® MX350</li>
+                    <li>Up to 16 GB memory</li>
+                    <li>Up to 1 TB HDD + 256G PCIe SSD</li>
+                    <li>Up to 39.68cm(15.6") FHD NanoEdge OLED display</li>
+                    <li>ASUS Intelligent Performance Technology (AIPT)</li>
+                    <li>Multiple color option with color-blocked Enter key</li>
+                </ul>
+                <h2 class="price">₹ 45,990.00</h2>
+                <h5> <span>₹ 46,990.00</span> SAVE ₹ 1,000.00</h5>
+                <button class="vivobook15" onclick="buy('39.62cm(5.6) Vivobook 15 OLED K513 (11th gen intel)','Windows 10 Home - ASUS recommends Windows 10 Pro for business , Free Upgrade to Windows 11¹ (when available, see below)','₹ 45,990.00')">Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/18-10-2021/images/dell15.png" alt="" srcset="">
+            </div>
+            <div class="desc">
+                <h2>Dell 15-inch FHD Laptop</h2>
+                <h3>(11th Gen i5-1135G7/8GB/1TB HDD/256GB SSD/Win 10 + MS Office/2GB Graphics/Black) - Inspiron 3501</h3>
+                <a href="#" id="moreitems">more-info</a>
+                <ul>
+                    <li>AMD Ryzen™ 7 5700 series</li>
+                    <li>AMD Radeon™ Graphics</li>
+                    <li>Up to 8 GB memory</li>
+                    <li>512GB M.2 NVMe™ PCIe® 3.0 SSD</li>
+                    <li>35.56 cm(14") FHD NanoEdge display</li>
+                    <li>Optional fingerprint sensor login</li>
+                </ul>
+                <h2 class="price">₹ 66,475.00</h2>
+                <h5> <span>₹ 46,990.00</span> SAVE ₹ 1,000.00</h5>
+                <button class="dell15" onclick="buy('Dell 15-inch FHD Laptop','(11th Gen i5-1135G7/8GB/1TB HDD/256GB SSD/Win 10 + MS Office/2GB Graphics/Black) - Inspiron 3501','₹ 66,475.00')">Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/18-10-2021/images/hpcromebook.png" alt="" srcset="">
+            </div>
+            <div class="desc">
+                <h2>HP® Chromebook For Students - With Intel Core i7 - HP.com</h2>
+                <h3>(11th Gen i5-1135G7/8GB/1TB HDD/256GB SSD/Win 10 + MS Office/2GB Graphics/Black) - Inspiron 3501</h3>
+                <a href="#" id="moreitems">more-info</a>
+                <ul>
+                    <li>Up to NVIDIA® GeForce® MX350</li>
+                    <li>Up to 16 GB memory</li>
+                    <li>Up to 1 TB HDD + 256G PCIe SSD</li>
+                    <li>Up to 39.68cm(15.6") FHD NanoEdge OLED display</li>
+                    <li>ASUS Intelligent Performance Technology (AIPT)</li>
+                    <li>Multiple color option with color-blocked Enter key</li>
+                </ul>
+                <h2 class="price">₹ 66,475.00</h2>
+                <h5> <span>₹ 46,990.00 </span> SAVE ₹ 1,000.00</h5>
+                <button class="hpcromebook" onclick="buy('HP® Chromebook For Students - With Intel Core i7 - HP.com','(11th Gen i5-1135G7/8GB/1TB HDD/256GB SSD/Win 10 + MS Office/2GB Graphics/Black) - Inspiron 3501','₹ 66,475.00')">Add to cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="/18-10-2021/images/hppavilion15.png" alt="" srcset="">
+            </div>
+            <div class="desc">
+                <button>button</button>
+                <h2>HP Pavilion Laptop 15-eg0103TX</h2>
+                <h3>(11th Gen i5-1135G7/8GB/1TB HDD/256GB SSD/Win 10 + MS Office/2GB Graphics/Black) - Inspiron 3501</h3>
+                <a href="#" id="moreitems">more-info</a>
+                <ul>
+                    <li>11th Gen Intel® Core™ processor</li>
+                    <li>NVIDIA® GeForce® graphics</li>
+                    <li>Full HD IPS display</li>
+                    <li>Up to 39.68cm(15.6") FHD NanoEdge OLED display</li>
+                    <li>86% screen-to body ratio</li>
+                    <li>HP Fast Charge</li>
+                </ul>
+                <h2 class="price">₹ 66,475.00</h2>
+                <h5> <span>₹ 74,999.00</span> SAVE ₹ 1,000.00</h5>
+                <button class="hppavilion15" onclick="buy('HP Pavilion Laptop 15-eg0103TX','(11th Gen i5-1135G7/8GB/1TB HDD/256GB SSD/Win 10 + MS Office/2GB Graphics/Black) - Inspiron 3501','₹ 66,475.00')">Add to cart</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="/18-10-2021/js/Shopping.js"></script>\
+    <script>
+        $(document).ready(function() {
+            $('.desc').on('click', 'a,#moreitems', function(event) {
+                event.preventDefault();
+                $(this).closest('.desc').find('li').toggle(function() {
+                        alert("Working");
+                    })
+                    // $('li').toggle();
+            })
+        })
+    </script>
+</body>
+
+</html>
+
+//handling attribute,onkeyup,onkeydown,preventDefault,stoppropogation,toggle,append,prepend,fadein,fadeout,

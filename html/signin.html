@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/18-10-2021/css/signin.css">
+    <link rel="stylesheet" href="/18-10-2021/css/Shopping.css">
+    <title>Sign-in</title>
+</head>
+
+<body>
+    <!-- /* ----------------------------------------------------------------------------------------
+ navbar
+---------------------------------------------------------------------------------------- */ -->
+    <nav>
+        <a style="font-size: larger; font-weight: 600;" href="Shopping.html"><i class="fa fa-shopping-cart" ></i>&emsp;Shopping Mart</a>
+        <div class="navbar">
+            <a href="Shopping.html">Home</a>
+            <a href="diwali.html">Diwali Special</a>
+            <a href="signin.html" class="active">Sign in</a>
+            <a href="signup.html">Sign up</a>
+            <a href="mycart.html">My cart</a>
+        </div>
+    </nav>
+    <!-- /* ----------------------------------------------------------------------------------------
+ Sign-in form
+---------------------------------------------------------------------------------------- */ -->
+    <div class="signin">
+        <div class="content">
+            <ion-icon name="person" style="height: 50px; width: 50px; color: #425664 ;" class="user"></ion-icon>
+            <form action="#" method="GET" class="signinform" autocomplete="off">
+
+                <div class="signrow">
+                    <input type="text" name="" id="username" placeholder="username"><br>
+                    <label for="" class="lblusername"></label>
+                </div>
+                <div class="signrow">
+                    <input type="password" name="" id="password" placeholder="password"><br>
+                    <label for="" class="lblpassword"></label><br>
+                </div>
+
+                <div class="signrow">
+                    <button type="submit" class="signinbtn" onclick="redirect()" style="margin-bottom: 15px;">Signin</button><br>
+                </div>
+                <a href="signup.html" class="aha" style="margin-top: -20px; text-decoration: underline; text-underline-position: under;">Don't have an account ?</a><br>
+                <div class="signrow">
+                    <p class="error"></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- /* ----------------------------------------------------------------------------------------
+ scripts
+---------------------------------------------------------------------------------------- */ -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="/18-10-2021/js/signin.js"></script>
+    <script src="/18-10-2021/js/Shopping.js"></script>
+    <script src="/18-10-2021/js/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('#username').on('keyup', function(e) {
+                let username = $('#username').val();
+
+                if (e.which === 32) {
+                    $('.lblusername').html('empty spaces are not allowed').addClass('error');
+                } else if (username == "") {
+                    $('.lblusername').html('username is required').addClass('error');
+                }
+                // else if (username.length < 4) {
+                //     $('.lblusername').html('Atleast 4 characters are required').addClass('error');
+                // } 
+                else {
+                    $('.lblusername').empty();
+                }
+            })
+            $('#password').on('keyup', function() {
+                let password = $('#password').val();
+                if (password == "") {
+                    $('.lblpassword').html('password is required').addClass('error');
+                }
+                // else if (password.length < 8) {
+                //     $('.lblpassword').html('Atleast 8 characters are required').addClass('error');
+                // } 
+                else {
+                    $('.lblpassword').empty();
+                }
+            })
+
+            $('.signinbtn').on('click', function() {
+                let username = $('#username').val();
+                let password = $('#password').val();
+                let localsuername = localStorage.getItem("localusername1");
+                let localpassword = localStorage.getItem("localpassword1");
+                if (username == localsuername && password == localpassword) {
+                    alert("Signed in successfully");
+                    document.location.href = "Shopping.html";
+
+                }
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>
